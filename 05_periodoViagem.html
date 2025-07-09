@@ -13,10 +13,21 @@
     //ENTRADA
     const distanciaViagem = Number(prompt(`Qual a distância da viagem (em quilômetros)`));
     const quiPorDia = Number(prompt(`Informe quantos quilômetros pretende viajar por dia`));
-
-    //PROCESSAMENTO
-
     
+    const dias = distanciaViagem/quiPorDia;
+    //PROCESSAMENTO
+   
+    if(dias <= 3) {
+        document.write(`A viagem pode ser realizada em qualquer período`);
+    } else if (dias <= 10) {
+        document.write(`A viagem pode ser realizada nas férias de Julho`);
+    } else if (dias <= 20 && dias > 10) {
+        document.write(`A viagem pode ser realizada nas férias de verão`);
+    } else {
+        document.write(`Você deverá trabalhar remoto`);
+    }
+    
+
     //SAÍDA
 
 </script>
