@@ -6,7 +6,7 @@
     
     O script deverá calcular e mostrar o valor do aumento e o valor do novo salário.
     
-    - Considere que, caso seu salário seja menor ou igual a R$ 2.000,00 o reajuste será de 15%.
+    - Considere que, caso seu salário seja menor ou igual a R$ 2.000,00 o reajuste será de 15%.-
     - Caso seja maior que R$ 2.000,00 o reajuste será de 10%.
     - Ainda, sendo maior que R$ 4.000,00 o reajuste será de 7,5%.
     - Por fim, caso seja maior que R$ 7.000,00 o reajuste será de 5%.
@@ -15,10 +15,37 @@
     */
 
     //ENTRADA
-
+    const salarioUsuario = Number(prompt(`Informe o valor do seu salário`));
+    let novoSalario;
+    let aumentoSalario;
 
     //PROCESSAMENTO
 
+    if (salarioUsuario <= 2000) {
+
+     aumentoSalario = salarioUsuario * (15/100);
+     novoSalario = salarioUsuario + aumentoSalario;
+      
+     document.write(`O valor do aumento é de R$${aumentoSalario}, com seu novo salário sendo de R$${novoSalario}`);
+    } else if (salarioUsuario > 2000 && salarioUsuario < 4000){
+        
+        aumentoSalario = salarioUsuario * (10/100);
+     novoSalario = salarioUsuario + aumentoSalario;
+     
+     document.write(`O valor do aumento é de R$${aumentoSalario}, com seu novo salário sendo de R$${novoSalario}`);
+    } else if(salarioUsuario > 4000 && salarioUsuario < 7000) {
+
+        aumentoSalario = salarioUsuario * (7.5/100);
+     novoSalario = salarioUsuario + aumentoSalario;
+     
+     document.write(`O valor do aumento é de R$${aumentoSalario}, com seu novo salário sendo de R$${novoSalario}`);
+    } else {
+
+        aumentoSalario = salarioUsuario * (5/100);
+     novoSalario = salarioUsuario + aumentoSalario;
+     
+     document.write(`O valor do aumento é de R$${aumentoSalario}, com seu novo salário sendo de R$${novoSalario}`);
+    }
     
     //SAÍDA
 
