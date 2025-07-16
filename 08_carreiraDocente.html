@@ -18,12 +18,32 @@
     Calcule os pontos e apresente a classificação do Professor.
     */
 
-    //ENTRADA
+     //ENTRADA
+    let carreira = Number(prompt('Quantos anos você tem de carreira?'));
+    let projetosPesquisa = Number(prompt('Informe a quantia de Projetos de Pesquisa  ja coordenou?'));
+    let projetosExtensao = Number(prompt('Informe quantos Projetos de Extensão já orientou'));
+    let tccs = Number(prompt('Informe quantos TCCs já orientou'));
 
 
     //PROCESSAMENTO
+    carreira = 2.5;
+    projetosPesquisa = 5;
+    projetosExtensao = 5;
+    tccs = 3;
+    const pontos = carreira + projetosPesquisa + projetosExtensao + tccs;
 
-    
+    if (pontos <= 30) {
+        document.write(`CONVIDADO`);
+    }
+    else if (pontos > 30 && pontos <= 50) {
+        document.write(`AGREGADO`);
+    }
+    else if (pontos > 50) {
+        document.write(`TITULAR`);
+    }
+    else {
+        document.write(`Valor inválido`);
+    }
     //SAÍDA
 
 </script>

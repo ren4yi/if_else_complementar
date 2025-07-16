@@ -11,12 +11,22 @@
     Apresente o destino final e o custo final da viagem para o destino.
     */
 
-    //ENTRADA
-
+     //ENTRADA
+    const viagemSP = Number(prompt('Informe o valor do transporte aéreo para SP'));
+    const viagemRJ = Number(prompt('Informe o valor do transporte aéreo para RJ'));
+    const hotelSP = Number(prompt('Informe o valor do hotel para SP'));
+    const hotelRJ = Number(prompt('Informe o valor do hotel para RJ'));
+    const custoSP = viagemSP + hotelSP;
+    const custoRJ = viagemRJ + hotelRJ;
 
     //PROCESSAMENTO
+    if (custoRJ < custoSP) {
+        document.write(`A melhor decisão de viagem é a de RJ, com seu custo sendo de R$${custoRJ}.`);
+    }
+    else {
+        document.write(`A melhor decisão de viagem é a de SP, com seu custo sendo de R$${custoSP}.`);
+    }
 
-    
     //SAÍDA
 
 </script>

@@ -11,14 +11,25 @@
 
     //ENTRADA
 
-   const valorImovel = Number(prompt(`Informe o valor do imóvel`));
-   const anosFinan = Number(prompt(`Em quantos anos será realizado o financiamento`));
-   const salarioComprador = Number(prompt(`Informe o salário do comprador`));
+    const valorImovel = Number(prompt('Informe o valor do imóvel'));
+    let anos = Number(prompt('Em quantos anos será realizado o financiamento?'));
+    const salario = Number(prompt('Informe seu sálario'));
 
     //PROCESSAMENTO
-   
-    
-    
+
+    anos = anos * 12;
+    const prestacao = valorImovel / anos;
+    salario = salario + ((salario * 30)/100);
+
+    if (prestacao > salario) {
+        alert(`O valor da prestação é R$${prestacao}, foi aceito o financiamento`);
+    }
+    else if (prestacao >= salario) {
+        alert(`O valor da prestação é R$${prestacao}, não foi aceito o financiamento`);
+    }
+    else {
+        alert(`Valor inválido`);
+    }
     //SAÍDA
 
 </script>

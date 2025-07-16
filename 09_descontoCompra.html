@@ -11,12 +11,30 @@
     Calcule e apresente o preço final do computador de acordo com a Forma de Pagamento.
     */
 
-    //ENTRADA
-
-
-    //PROCESSAMENTO
-
+     //ENTRADA
+    const valor = Number(prompt('Informe o valor do computador'));
+    const pagamento = Number(prompt('Informe a forma que será paga (B - boleto / D - dinheiro / P - pix)'));
     
+    //PROCESSAMENTO
+    const des3 = (valor * 3)/100;
+    const des5 = (valor * 5)/100;
+    const des10 = (valor * 10)/100;
+    const des3F = valor - (valor * 3)/100;
+    const des5F = valor - (valor * 5)/100;
+    const des10F = valor - (valor * 10)/100;
+
+    if (pagamento == "B") {
+        document.write(`Se o valor for pago no boleto terá desconto de R$${des3}, seu valor final ficando R$${des3F}`);
+    }
+    else if (pagamento == "D") {
+        document.write(`Se o valor for pago no dinheiro terá desconto de R$${des5}, seu valor final ficando R$${des5F}`);
+    }
+    else if (pagamento == 'P') {
+        document.write(`Se o valor for pago no pix terá desconto de R$${des10}, seu valor final ficando R$${des10F}`);
+    }
+    else {
+        document.write(`Valor inválido`);
+    }
     //SAÍDA
 
 </script>

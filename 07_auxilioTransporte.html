@@ -11,13 +11,28 @@
     Calcule e apresente em tela o desconto, se existente, e o salário final recebido pelo funcionário.
     */
 
-    //ENTRADA
-    const salario = Number(prompt(`Quanto você recebe de salário por mês?`));
-    const auxilio = prompt(`Você deseja receber auxílio transporte?`);
-    const transporte = prompt(`Você utiliza veículo próprio para se locomover ao trabalho?`);
-  
+     //ENTRADA
+    const salario = Number(prompt('Informe seu sálario'));
+    const auxilio = (prompt('Deseja receber auxílio transporte?'));
+    const veiculo = (prompt('Utiliza de veiculo próprio para se locomover até o trabalho?'));
     //PROCESSAMENTO
-    
+    const desconto = ((salario * 6)/100);
+    const descontado = salario - ((salario * 6)/100);
+    const adicional = salario + 200;
+    const adicPub = salario + 150;
+
+    if (auxilio == "Sim") {
+        alert(`Ao escolher receber o auxilio transporte foram descontados R$${desconto}, seu sálario ficará R$${descontado} `);
+    }
+    else if (veiculo == "Sim") {
+        alert(`A empresa fornecerá R$200 para ajudar com seu veiculo, seu sálario ficará R$${adicional}`);
+    }
+    else if (veiculo == "Não") {
+        alert(`A empresa fornecerá R$150 para ajudar com seu veiculo, seu sálario ficará R$${adicPub}`);
+    }
+    else {
+        alert(`Valor inválido`);
+    }
     
     //SAÍDA
 
